@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3e5ff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:background="#21aa53"
+        android:gravity="center_vertical"
+        android:id="@+id/linearLayout3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Note"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal|center_vertical"
+            />
+    </LinearLayout>
+
+    <EditText
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/text_note_title"
+        android:padding="5dp"
+        android:background="#f9fdff"
+        android:paddingTop="5dp"
+        android:hint="Title"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_gravity="fill_horizontal"
+        android:layout_columnSpan="2"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="textMultiLine"
+        android:background="#f3e5ff"
+        android:ems="10"
+        android:hint="Content"
+        android:id="@+id/text_note_content"
+        android:layout_row="1"
+       android:padding="5dp"
+        android:layout_column="0"
+        android:layout_gravity="fill"
+        android:layout_columnSpan="2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_below="@+id/text_note_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout2">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_marginRight="5dp"
+            android:id="@+id/button_save"
+           android:background="#21aa53"
+            android:textColor="@android:color/white"
+            android:onClick="buttonSaveClicked"
+            />
+
+        <Button
+            android:layout_marginLeft="5dp"
+            android:id="@+id/button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="buttonCancelClicked"
+
+            android:background="#db1e1e"
+            android:textColor="@android:color/white"
+            android:text="Cancel" />
+    </LinearLayout>
+
+
+</RelativeLayout>
